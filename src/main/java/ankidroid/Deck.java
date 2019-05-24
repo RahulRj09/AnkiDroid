@@ -7,11 +7,4 @@ public class Deck {
         this.deckName = deckName;
     }
 
-//    public void setDeckName(String deckName) {
-//        this.deckName = deckName;
-//    }
-//
-//    public String getDeckName() {
-//        return deckName;
-//    }
 }
