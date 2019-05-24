@@ -1,4 +1,4 @@
-package main.java.ankidroid;
+package ankidroid;
 
 public class Deck {
     public String deckName;

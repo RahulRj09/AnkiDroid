@@ -1,4 +1,4 @@
-package test.java.ankidroidtest;
+package ankidroidtest;
 
 public class AnkiDroidTest {
 }
