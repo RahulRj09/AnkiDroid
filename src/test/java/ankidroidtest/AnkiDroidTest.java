@@ -12,10 +12,4 @@ public class AnkiDroidTest {
         Deck deck = new Deck("Technical");
         assertEquals("Technical", deck.deckName);
     }
-    @Test
-    public void itShouldBeAddCardOrNot() {
-        Card card = new Card("front", "back");
-        assertEquals("front back",card.front+" "+card.back);
-    }
-
 }
