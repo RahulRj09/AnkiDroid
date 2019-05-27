@@ -30,4 +30,15 @@ public class AnkiDroidTest {
         expectedCards.add(card);
         assertEquals(expectedCards, deck.getCards());
     }
+
+    @Test
+    public void shouldCountNumberOfCardsInDeck(){
+        int expectedCards = 2;
+        Deck deck = new Deck("Technical");
+        deck.addCard("front", "back");
+        deck.addCard("front", "back");
+        System.out.println(deck.getNumberOfCards());
+        assertEquals(expectedCards,deck.getNumberOfCards());
+
+    }
 }
