@@ -3,18 +3,29 @@ package ankidroidtest;
 import ankidroid.*;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class AnkiDroidTest {
     @Test
-    public void ShouldCreateDeck() {
+    public void shouldCreateDeck() {
         Deck deck = new Deck("Technical");
         assertEquals("Technical", deck.deckName);
     }
     @Test
-    public void ShouldAddCard() {
+    public void shouldAddCard() {
         Card card = new Card("front", "back");
         assertEquals("front , back",card.toString());
     }
-
+    @Test
+    public  void shouldCreateCardInDeck (){
+        List<Card> expectedCards = new ArrayList<>();
+        Deck deck = new Deck("Technical");
+        Card create = new Card("front", "back");
+        deck.createCard("front","back");
+        expectedCards.add(create);
+        assertEquals(expectedCards, deck.getCards());
+    }
 }
