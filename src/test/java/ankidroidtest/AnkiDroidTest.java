@@ -14,18 +14,20 @@ public class AnkiDroidTest {
         Deck deck = new Deck("Technical");
         assertEquals("Technical", deck.deckName);
     }
+
     @Test
     public void shouldAddCard() {
         Card card = new Card("front", "back");
-        assertEquals("front , back",card.toString());
+        assertEquals("front , back", card.toString());
     }
+
     @Test
-    public  void shouldCreateCardInDeck (){
+    public void shouldAddCardInDeck() {
         List<Card> expectedCards = new ArrayList<>();
         Deck deck = new Deck("Technical");
-        Card create = new Card("front", "back");
-        deck.createCard("front","back");
-        expectedCards.add(create);
+        Card card = new Card("front", "back");
+        deck.createCard("front", "back");
+        expectedCards.add(card);
         assertEquals(expectedCards, deck.getCards());
     }
 }
