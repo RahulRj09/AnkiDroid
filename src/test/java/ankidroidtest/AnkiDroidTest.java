@@ -26,7 +26,7 @@ public class AnkiDroidTest {
         List<Card> expectedCards = new ArrayList<>();
         Deck deck = new Deck("Technical");
         Card card = new Card("front", "back");
-        deck.createCard("front", "back");
+        deck.addCard("front", "back");
         expectedCards.add(card);
         assertEquals(expectedCards, deck.getCards());
     }

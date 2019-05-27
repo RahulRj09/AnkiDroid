@@ -11,7 +11,7 @@ public class Deck {
         this.deckName = deckName;
     }
 
-    public void createCard(String front, String back) {
+    public void addCard(String front, String back) {
         Card create = new Card(front, back);
         cards.add(create);
     }
