@@ -4,16 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Deck {
-    public String deckName;
-    private final List<Card> cards = new ArrayList<>();
-    public static int numberOfCards = 0;
+    public String name;
+    private List<Card> cards = new ArrayList<>();
 
-    public Deck(String deckName) {
-        this.deckName = deckName;
+    public Deck(String name) {
+        this.name = name;
     }
 
     public void addCard(String front, String back) {
-        numberOfCards++;
         Card create = new Card(front, back);
         cards.add(create);
     }
@@ -22,7 +20,4 @@ public class Deck {
         return cards;
     }
 
-    public static int getNumberOfCards() {
-        return numberOfCards;
-    }
 }

@@ -12,7 +12,7 @@ public class AnkiDroidTest {
     @Test
     public void shouldCreateDeck() {
         Deck deck = new Deck("Technical");
-        assertEquals("Technical", deck.deckName);
+        assertEquals("Technical", deck.name);
     }
 
     @Test
@@ -31,14 +31,4 @@ public class AnkiDroidTest {
         assertEquals(expectedCards, deck.getCards());
     }
 
-    @Test
-    public void shouldCountNumberOfCardsInDeck(){
-        int expectedCards = 2;
-        Deck deck = new Deck("Technical");
-        deck.addCard("front", "back");
-        deck.addCard("front", "back");
-        System.out.println(deck.getNumberOfCards());
-        assertEquals(expectedCards,deck.getNumberOfCards());
-
-    }
 }
