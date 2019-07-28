@@ -1,11 +1,6 @@
 package ankidroid;
-
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.codehaus.jackson.map.ObjectMapper;
 
 public class Deck {
     public String name;
@@ -18,16 +13,7 @@ public class Deck {
     public void addCard(String front, String back) {
         Card create = new Card(front, back);
         cards.add(create);
-        ObjectMapper mapper = new ObjectMapper();
-
-        try {
-            mapper.writeValue(new File("/Users/rahul.joshi/ankidroidd/src/main/java/ankidroid/cards.json"),
-                    cards);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        JsonWriter.writer(cards);
     }
 
     public List<Card> getCards() {
