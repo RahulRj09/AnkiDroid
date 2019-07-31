@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class JsonReaderWriter {
-    static void writer(List<Card> cards) {
+    static void write(List<Card> cards) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
         try {
@@ -24,7 +24,7 @@ public class JsonReaderWriter {
 
     }
 
-    static List<Map<String, Object>> reader() {
+    static List<Map<String, Object>> read() {
 
         ObjectMapper objectMapper = new ObjectMapper();
         try {

@@ -15,12 +15,13 @@ public class Deck {
     public void addCard(String front, String back) {
         Card create = new Card(front, back);
         cards.add(create);
-        JsonReaderWriter.writer(cards);
+        JsonReaderWriter.write(cards);
     }
 
     public List<Map<String, Object>> getCards() {
-        return JsonReaderWriter.reader();
+        return JsonReaderWriter.read();
     }
+
 
 }
 
