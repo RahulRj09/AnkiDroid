@@ -1,6 +1,8 @@
 package ankidroid;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Deck {
     public String name;
@@ -13,11 +15,12 @@ public class Deck {
     public void addCard(String front, String back) {
         Card create = new Card(front, back);
         cards.add(create);
-        JsonWriter.writer(cards);
+        JsonWriterReader.writer(cards);
     }
 
-    public List<Card> getCards() {
-        return cards;
+    public List<Map<String, Object>> getCards() {
+        return JsonWriterReader.reader();
     }
 
 }
+

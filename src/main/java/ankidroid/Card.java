@@ -1,5 +1,6 @@
 package ankidroid;
 
+
 import java.util.Objects;
 
 public class Card {
