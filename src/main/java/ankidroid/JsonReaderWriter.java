@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-public class JsonWriterReader {
+public class JsonReaderWriter {
     static void writer(List<Card> cards) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
